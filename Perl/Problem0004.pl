@@ -19,7 +19,6 @@ print "The largest palindrome product is: $result\n";
 sub reverse
 {
     my $num = shift;
-    my $copy = $num;
     my $rev = 0;
 
     while ($num != 0) {
