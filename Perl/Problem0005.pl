@@ -7,7 +7,7 @@ sub gcd;
 sub lcm;
 
 foreach my $i (1..20) {
-    $result = ($result * $i) / gcd($result, $i);
+    $result = lcm($result, $i)
 }
 
 print "The smallest multiple is: $result\n";
@@ -19,14 +19,11 @@ sub gcd
     my $k = 1;
 
     while ($k <= $num1 && $k <= $num2) {
-        if ($k % $num1 == 0 && $k % $num2 == 0) {
+        if ($num1 % $k == 0 && $num2 % $k == 0) {
             $divisor = $k;
-            print "$num1, $num2, $divisor\n";
         }
         $k += 1;
-        print "$k\n";
     }
-    #print "$num1, $num2, $divisor\n";
     return $divisor;
 }
 
