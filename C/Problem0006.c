@@ -1,5 +1,5 @@
 /**
- * Problem0005 - Sum square difference
+ * Problem0006 - Sum square difference
  * 
  * https://github.com/agileshaw/Project-Euler
  **/
@@ -12,9 +12,8 @@ int sumOfSquares(int start, int end)
 {
     int i, sum = 0;
 
-    for (i = start; i <= end; i++) {
+    for (i = start; i <= end; i++)
         sum += i * i; 
-    }
 
     return sum;
 }
@@ -23,9 +22,8 @@ int squareOfSums(int start, int end)
 {
     int i, sum = 0, square;
 
-    for (i = start; i <= end; i++) {
+    for (i = start; i <= end; i++)
         sum += i;
-    }
 
     square = sum * sum;
 

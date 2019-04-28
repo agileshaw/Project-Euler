@@ -1,4 +1,4 @@
-# Problem0004 - Largest palindrome product
+# Problem0005 - Smallest multiple
 # 
 # https://github.com/agileshaw/Project-Euler
 
