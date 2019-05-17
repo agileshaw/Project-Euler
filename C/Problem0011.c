@@ -48,21 +48,20 @@ int main()
     int i, j, result = 0;
 
     for (i = 0; i < 20; i++) {
-        if (i + 4 <= 20)
-            result = findMax(product(grid[i][j], grid[i + 1][j], grid[i + 2][j], grid[i + 3][j]), result);
-
         for (j = 0; j < 20; j++)
         {
+            if (i + 4 <= 20)
+                result = findMax(product(grid[i][j], grid[i + 1][j], grid[i + 2][j], grid[i + 3][j]), result);
             if (j + 4 <= 20)
                 result = findMax(product(grid[i][j], grid[i][j + 1], grid[i][j + 2], grid[i][j + 3]), result);
-            if (i + 4 <= 20 && j + 4 <= 20)
+            if ((i + 4 <= 20) && (j + 4 <= 20))
                 result = findMax(product(grid[i][j], grid[i + 1][j + 1], grid[i + 2][j + 2], grid[i + 3][j + 3]), result);
-            if (i - 4 >= -1 && j + 4 <= 20)
+            if ((i - 4 >= -1) && (j + 4 <= 20))
                 result = findMax(product(grid[i][j], grid[i - 1][j + 1], grid[i - 2][j + 2], grid[i - 3][j + 3]), result);
         }
     }
 
-    printf("the greatest product of four adjacent numbers is: %d\n", result);
+    printf("The greatest product of four adjacent numbers is: %d\n", result);
 
     return 0;
 }
