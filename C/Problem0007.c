@@ -12,7 +12,7 @@ bool checkPrime(int num)
 {
     int i;
 
-    for (i = 2; i < num/2; i++) {
+    for (i = 2; i <= sqrt(num); i++) {
         if (num % i == 0)
             return false;
     }
@@ -22,14 +22,15 @@ bool checkPrime(int num)
 
 int main()
 {
-    int num, count;
+    int num = 1, count = 0;
 
-    for (num = 2, count = 0; count <= 10001; num++) {
+    while (count < 10001) {
+        num++;
         if (checkPrime(num))
             count++;
-        if (count > 10001)
-            printf("The 10001st prime is: %d\n", num);
     }
+    
+    printf("The 10001st prime is: %d\n", num);
 
     return 0;
 

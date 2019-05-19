@@ -5,34 +5,35 @@
  **/
 
 #include <stdio.h>
+#include <math.h>
 
-int numOfFactors(unsigned long long num)
+int numOfFactors(int num)
 {
-    int count = 0; 
-    unsigned long long i;
-
-    for (i = 1; i <= num; i++) {
+    int count = 0, i;
+    int root = (int)sqrt(num);
+    
+    for (i = 1; i <= root; i++) {
         if (num % i == 0)
-            count++;
+            count += 2;
     }
+
+    if (root * root == num) 
+        count -= 1;
 
     return count;
 }
 
-int main ()
+int main()
 {
-    int count = 0;
-    unsigned long long natural = 1, result = 0;
+    int count = 0, natural = 1, result = 0;
 
     while (count < 500) {
-        
         result += natural;
         natural++;
-        printf("%llu\n", result);
         count = numOfFactors(result);
-        }
+    }
 
-    printf("The highly divisible triangular number is: %llu\n", result);
+    printf("The highly divisible triangular number is: %d\n", result);
 
     return 0;
 }
