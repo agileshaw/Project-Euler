@@ -4,7 +4,7 @@
 
 if __name__ == "__main__":
  	size = 20
- 	result = 1;
+ 	result = 1
  	for i in range(1, 21):
  		result *= 2*size + 1 - i
  		result /= i
