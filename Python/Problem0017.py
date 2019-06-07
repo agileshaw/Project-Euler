@@ -13,11 +13,11 @@ def letterCount(num):
 	if num < 20: 
 		count = len(below_twenty[num])
 	elif num < 100:
-		count = len(below_hundred[num//10]) + letterCount(num%10);
+		count = len(below_hundred[num//10]) + letterCount(num%10)
 	elif num < 1000:
 		count = len(below_twenty[num//100]) + len(more[0]) + letterCount(num%100)
 		if num % 100 != 0:
-			count += len(more[2]);
+			count += len(more[2])
 	elif num == 1000:
 		count = len(below_twenty[1]) + len(more[1])
 
