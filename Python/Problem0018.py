@@ -2,13 +2,6 @@
 #
 # https://github.com/agileshaw/Project-Euler
 
-def maxPath(num):
-    for i in range(len(num)-2, -1, -1):
-        for j in range(i+1):
-            num[i][j] += max(num[i+1][j], num[i+1][j+1])
-
-    return num[0][0]
-
 if __name__ == "__main__":
     num = [[75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [95, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -26,6 +19,9 @@ if __name__ == "__main__":
             [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31, 0],
             [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]]
     
-    result = maxPath(num)
-    print("The maximum path sum is: %d" % result)
+    for i in range(len(num)-2, -1, -1):
+        for j in range(i+1):
+            num[i][j] += max(num[i+1][j], num[i+1][j+1])
+
+    print("The maximum path sum is: %d" % num[0][0])
     

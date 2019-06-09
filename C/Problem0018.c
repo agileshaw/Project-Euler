@@ -5,20 +5,7 @@
  **/
 
 #include <stdio.h>
-
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
-
-int maxPath (int num[15][15])
-{   
-    int i, j;
-
-    for (i = 13; i >= 0; i--) {
-        for (j = 0; j <= i; j++)
-            num[i][j] += MAX(num[i+1][j], num[i+1][j+1]);
-    }
-    
-    return num[0][0];
-}
 
 int main()
 {
@@ -37,10 +24,14 @@ int main()
                        {91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48, 0, 0},
                        {63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31, 0},
                        {4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23}};
-    int result;
+    int result, i, j;
 
-    result = maxPath(num);
-    printf("The maximum path sum is: %d\n", result);
+    for (i = 13; i >= 0; i--){
+        for (j = 0; j <= i; j++)
+            num[i][j] += MAX(num[i + 1][j], num[i + 1][j + 1]);
+    }
+
+    printf("The maximum path sum is: %d\n", num[0][0]);
 
     return 0;
 }

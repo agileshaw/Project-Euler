@@ -17,24 +17,15 @@ my @num = ([75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48, 0, 0],
             [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31, 0],
             [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]);
-sub maxPath;
 
-my $result = maxPath($num);
-print "The maximum path sum is: $result\n";
-
-sub maxPath
-{
-    my $num = shift;
-    
-    for (my $i = 13; $i >= 0; $i--) {
-        foreach my $j (0..$i) {
-            if ($num[$i+1][$j] >= $num[$i+1][$j+1]) {
-                $num[$i][$j] += $num[$i+1][$j];
-            } else {
-                $num[$i][$j] += $num[$i+1][$j+1];
-            }
+for (my $i = 13; $i >= 0; $i--) {
+    foreach my $j (0..$i) {
+        if ($num[$i+1][$j] >= $num[$i+1][$j+1]) {
+            $num[$i][$j] += $num[$i+1][$j];
+        } else {
+            $num[$i][$j] += $num[$i+1][$j+1];
         }
     }
-
-    return $num[0][0]
 }
+
+print "The maximum path sum is: $num[0][0]\n";
