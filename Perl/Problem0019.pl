@@ -2,6 +2,9 @@
 #
 # https: // github.com/agileshaw/Project-Euler
 
+use strict;
+use warnings;
+
 my $count = 0;
 my $weekday = 0;
 sub totalDays;

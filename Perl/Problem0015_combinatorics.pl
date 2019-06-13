@@ -2,6 +2,9 @@
 # 
 # https://github.com/agileshaw/Project-Euler
 
+use strict;
+use warnings;
+
 my $size = 20;
 my $result = 1;
 

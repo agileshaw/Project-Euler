@@ -2,6 +2,9 @@
 #
 # https://github.com/agileshaw/Project-Euler
 
+use strict;
+use warnings;
+
 my $num;
 my $sum = 0;
 my $check;

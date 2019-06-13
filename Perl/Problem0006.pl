@@ -2,6 +2,9 @@
 # 
 # https://github.com/agileshaw/Project-Euler
 
+use strict;
+use warnings;
+
 my $start = 1;
 my $end = 100;
 sub sumOfSquares;

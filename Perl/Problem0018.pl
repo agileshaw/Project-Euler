@@ -2,6 +2,9 @@
 #
 # https://github.com/agileshaw/Project-Euler
 
+use strict;
+use warnings;
+
 my @num = ([75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [95, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [17, 47, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],

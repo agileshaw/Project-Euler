@@ -2,25 +2,25 @@
 # 
 # https://github.com/agileshaw/Project-Euler
 
+use strict;
+use warnings;
+
 my $num = 600851475143;
 my $factor;
-my $i;
 my $flag = 0;
 
 while ($flag == 0)
 {
-    $i = 2;
-    while ($num % $i != 0 && $i < $num)
-    {
+    my $i = 2;
+    while ($num % $i != 0 && $i < $num) {
         $i++;
     }    
-    if ($num % $i == 0)
-    {
+    if ($num % $i == 0) {
         $num /= $i;
         $factor = $i;
-    } else
-    {
+    } else {
         $flag = 1;
     }    
 }
+
 print "The largest factor is: $factor\n"

@@ -2,15 +2,15 @@
 #
 # https://github.com/agileshaw/Project-Euler
 
-#usr/bin/env perl
 use strict;
+use warnings;
 
 my $sum = 0;
 my $tmp1 = 0;
 my $tmp2 = 1;
 my $fib = $tmp1 + $tmp2;
 my $limit = 4000000;
-my $total;
+my $total = 0;
 
 while ($fib < $limit) {
     if ($fib % 2 == 0) {
