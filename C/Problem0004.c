@@ -5,9 +5,9 @@
  **/
 
 #include <stdio.h>
-#include <math.h>
 
-int reverse(int num) {
+int reverse(int num)
+{
     int rev = 0;
     while (num != 0) {
         rev *= 10;
