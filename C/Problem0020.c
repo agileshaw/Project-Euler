@@ -1,5 +1,5 @@
 /**
- * Problem0016 - Power digit sum
+ * Problem0020 - Factorial digit sum
  * 
  * https://github.com/agileshaw/Project-Euler
  **/
