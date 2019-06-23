@@ -11,8 +11,7 @@ void bigIntMultiply(int *num, int size, int multiplier)
 {
     int i, tmp, carry = 0;
 
-    for (i = 0; i < size; i++)
-    {
+    for (i = 0; i < size; i++) {
         tmp = multiplier * num[i] + carry;
         num[i] = tmp % 10;
         carry = tmp / 10;
