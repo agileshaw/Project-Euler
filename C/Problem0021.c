@@ -12,12 +12,12 @@ int divisorSum(int num)
 {
 	int sum = 1, i;
 	
-	for (i = 2; i <= sqrt(num+1); i++) {
+	for (i = 2; i < sqrt(num+1); i++) {
 		if (num % i == 0){
-			if (num / i == i)
+			if (num/i == i)
 				sum += i;
 			else
-				sum += i + num/i;
+				sum += (i + num/i);
 		}
 	}
 
@@ -26,7 +26,7 @@ int divisorSum(int num)
 
 int main()
 {
-	int i, size = 10000, result = 0;
+	int i, j, size = 10000, result = 0;
 	int* num = calloc(size, sizeof(int));
 
 	if (num == NULL) {
@@ -38,7 +38,8 @@ int main()
 		num[i] = divisorSum(i);
 
 	for (i = 1; i < size; i++) {
-		if (num[num[i]] == i && num[i] != i)
+		j = num[i];
+		if (j < size && num[j] == i && j != i)
 			result += i;
 	}
 
