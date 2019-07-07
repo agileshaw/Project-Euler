@@ -17,7 +17,7 @@ int divisorSum(int num)
 			if (num/i == i)
 				sum += i;
 			else
-				sum += (i + num/i);
+				sum += i + num/i;
 		}
 	}
 
